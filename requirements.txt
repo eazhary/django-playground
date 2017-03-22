@@ -1,0 +1,4 @@
+django_allauth==0.31.0
+Django==1.10.6
+django_countries==4.2
+django_crispy_forms==1.6.1
