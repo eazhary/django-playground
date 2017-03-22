@@ -1,0 +1,12 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+<h2>{{album.title}}</h2>
+<h3>{{album.year}}</h3>
+<h3>{{album.artist}}</h3>
+<ul>
+{% for song in songs %}
+    <li>{{song.title}}</li>
+{% endfor %}
+</ul>
+{% endblock %}
+
