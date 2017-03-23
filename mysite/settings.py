@@ -25,7 +25,7 @@ SECRET_KEY = '5-m8+osi^e^tp5xwyq)00wup+&fg@s7!504v2cme2b&#u@9gmk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]', 'elasticbeanstalk.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]', 'elasticbeanstalk.com', u'my-env.ggvjdeuvkn.us-east-1.elasticbeanstalk.com']
 
 AUTHENTICATION_BACKENDS = (
 
