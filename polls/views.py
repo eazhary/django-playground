@@ -5,6 +5,8 @@ from django.views.generic import ListView, DetailView, FormView, CreateView
 from django.core.urlresolvers import reverse_lazy
 from .models import Album, Song
 from .forms import EmailForm
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 
 def index(request):
@@ -18,7 +20,7 @@ class Index(ListView):
     model = Album
 
 
-
+@method_decorator(login_required, name='dispatch')
 class Detail(DetailView):
     model = Album
 
