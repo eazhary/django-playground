@@ -149,7 +149,7 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 
-
+DEFAULT_FROM_EMAIL = "eazhary@gmail.com"
 EMAIL_HOST = "email-smtp.us-east-1.amazonaws.com"
 EMAIL_HOST_USER = "AKIAJLJYCFX7SWTECHCA"
 EMAIL_HOST_PASSWORD = "Ak7BAe/MaueipN/0nDDx/Xa417bxtp4upIp6qE6tmQc/"
