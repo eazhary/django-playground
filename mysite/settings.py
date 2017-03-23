@@ -42,7 +42,7 @@ AUTHENTICATION_BACKENDS = (
 INSTALLED_APPS = [
     'polls',
     'crispy_forms',
-
+    'bootstrapform',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -68,11 +68,13 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'mysite.urls'
+PROJECT_ROOT = os.path.normpath(os.path.dirname(os.path.abspath(__file__)))
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(PROJECT_ROOT, 'templates', 'plain', 'example'),
+            os.path.join(PROJECT_ROOT, 'templates', 'bootstrap', 'allauth'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -143,3 +145,12 @@ STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_AUTHENTICATION_METHOD = "username_email"
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = DEFAULT_FROM_EMAIL = 'eazhary@gmail.com'
+EMAIL_HOST_PASSWORD = 'salma1'
